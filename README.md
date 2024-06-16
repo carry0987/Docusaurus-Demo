@@ -1,6 +1,5 @@
 # Docusaurus-Test
 This repository is an example of deploying a Docusaurus V3 website to GitHub Pages using GitHub Actions.
-
 **Please note**: There are some difference between Docusaurus V2 and Docusaurus V3 on the "baseURL" setting.
 
 ## Configuring the GitHub repository
