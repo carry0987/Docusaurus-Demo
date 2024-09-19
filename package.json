@@ -1,7 +1,4 @@
 {
-  "name": "docusaurus-test",
-  "version": "1.0.1",
-  "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
