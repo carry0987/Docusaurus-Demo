@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [21]
+        node: [22]
 
     steps:
       - name: Checkout
