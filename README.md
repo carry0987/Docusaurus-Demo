@@ -10,7 +10,7 @@ Enable this experience in *GitHub.com -> Repository -> Settings -> Pages -> Buil
 ## Configuring Docusaurus
 Generate a Docusuarus website using the following command:
 ```bash
-yarn create docusaurus <folder-name> classic --typescript
+pnpm create docusaurus <folder-name> classic --typescript
 ```
 
 Make the following changes to the `docusaurus.config.ts` configuration file:
@@ -72,15 +72,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # 👇 Build steps
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: yarn
+          node-version: 22
+          cache: pnpm
       - name: Install dependencies
-        run: yarn install --frozen-lockfile --non-interactive
+        run: pnpm install --frozen-lockfile --non-interactive
       - name: Build
-        run: yarn build
+        run: pnpm build
       # 👆 Build steps
       - name: Setup Pages
         uses: actions/configure-pages@v4
