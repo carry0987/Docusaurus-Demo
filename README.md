@@ -21,7 +21,7 @@ const config: Config = {
     // (...)
     url: `https://<github-organization-name>.github.io`,
     baseUrl = '/<repository-name>/`;
-    };
+};
 ```
 
 2. Set the `organizationName` and `projectName` options
@@ -39,16 +39,16 @@ const config: Config = {
     // (...)
     presets: [
     [
-        "classic",
+        '@docusaurus/preset-classic',
         {
-        docs: {
-            // (...)
-            editUrl: `https://github.com/<github-organization-name>/<repository-name>/tree/main/`,
-        },
-        blog: {
-            // (...)
-            editUrl: `https://github.com/<github-organization-name>/<repository-name>/tree/main/`,
-        },
+            docs: {
+                // (...)
+                editUrl: `https://github.com/<github-organization-name>/<repository-name>/tree/main/`,
+            },
+            blog: {
+                // (...)
+                editUrl: `https://github.com/<github-organization-name>/<repository-name>/tree/main/`,
+            },
         },
     ],
     ],
@@ -86,13 +86,13 @@ jobs:
         run: pnpm build
       # 👆 Build steps
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # 👇 Specify build output path
           path: build
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
 ```
