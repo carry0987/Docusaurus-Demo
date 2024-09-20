@@ -43,15 +43,13 @@ const config: Config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/carry0987/Docusaurus-Test/tree/master/',
+                    editUrl: 'https://github.com/carry0987/Docusaurus-Test/tree/master/',
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/carry0987/Docusaurus-Test/tree/master/',
+                    editUrl: 'https://github.com/carry0987/Docusaurus-Test/tree/master/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -129,6 +127,11 @@ const config: Config = {
             ],
             copyright: `Copyright © ${new Date().getFullYear()} carry0987. Built with Docusaurus.`,
         },
+        colorMode: {
+            defaultMode: 'light',
+            disableSwitch: false,
+            respectPrefersColorScheme: true,
+        },
         prism: {
             theme: prismThemes.oneDark,
             darkTheme: prismThemes.oneDark,
@@ -139,12 +142,32 @@ const config: Config = {
              * The position of the live playground, above or under the editor
              * Possible values: "top" | "bottom"
              */
-            playgroundPosition: 'bottom'
+            playgroundPosition: 'bottom',
         },
+        // algolia: {
+        //     // The application ID provided by Algolia
+        //     appId: 'YOUR_APP_ID',
+        //     // Public API key: it is safe to commit it
+        //     apiKey: 'YOUR_SEARCH_API_KEY',
+        //     indexName: 'YOUR_INDEX_NAME',
+        //     // Optional: see doc section below
+        //     contextualSearch: true,
+        //     // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        //     externalUrlRegex: 'external\\.com|domain\\.com',
+        //     // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        //     replaceSearchResultPathname: {
+        //         from: '/docs/', // or as RegExp: /\/docs\//
+        //         to: '/',
+        //     },
+        //     // Optional: Algolia search parameters
+        //     searchParameters: {},
+        //     // Optional: path for search page that enabled by default (`false` to disable it)
+        //     searchPagePath: 'search',
+        //     // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
+        //     insights: false,
+        // },
     } satisfies Preset.ThemeConfig,
-    themes: [
-        '@docusaurus/theme-live-codeblock',
-    ],
+    themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 export default config;
