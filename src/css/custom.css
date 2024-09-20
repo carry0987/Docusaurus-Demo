@@ -30,6 +30,10 @@
 }
 
 /* You can add custom styles here. */
+a.breadcrumbs__link {
+  vertical-align: top;
+}
+
 pre.prism-code:not(:has(> code)) {
   border-radius: 0;
 }
