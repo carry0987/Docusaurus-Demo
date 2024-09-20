@@ -11,12 +11,12 @@ const config: Config = {
     url: 'https://carry0987.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: '/Docusaurus-Test',
+    baseUrl: '/Docusaurus-Demo/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'carry0987', // Usually your GitHub org/user name.
-    projectName: 'Docusaurus-Test', // Usually your repo name.
+    projectName: 'Docusaurus-Demo', // Usually your repo name.
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -31,11 +31,17 @@ const config: Config = {
 
     presets: [
         [
-            'classic',
+            '@docusaurus/preset-classic',
             {
+                sitemap: {
+                    changefreq: 'weekly',
+                    priority: 0.5,
+                },
                 docs: {
                     sidebarPath: './sidebars.ts',
                     // Please change this to your repo.
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
                     // Remove this to remove the "edit this page" links.
                     editUrl:
                         'https://github.com/carry0987/Docusaurus-Test/tree/master/',
@@ -124,10 +130,21 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} carry0987. Built with Docusaurus.`,
         },
         prism: {
-            theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
+            theme: prismThemes.oneDark,
+            darkTheme: prismThemes.oneDark,
+            additionalLanguages: ['tsx', 'css', 'json', 'bash'],
+        },
+        liveCodeBlock: {
+            /**
+             * The position of the live playground, above or under the editor
+             * Possible values: "top" | "bottom"
+             */
+            playgroundPosition: 'bottom'
         },
     } satisfies Preset.ThemeConfig,
+    themes: [
+        '@docusaurus/theme-live-codeblock',
+    ],
 };
 
 export default config;
