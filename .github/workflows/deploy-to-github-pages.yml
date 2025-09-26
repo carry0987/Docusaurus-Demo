@@ -28,13 +28,11 @@ jobs:
   build:
     environment:
       name: ${{ github.ref_name }}
-      url: ${{ steps.deployment.outputs.page_url }}
-
+      url: ${{ steps.upload-artifact.outputs.page_url }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [24]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -60,6 +58,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
+        id: upload-artifact
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload entire repository
