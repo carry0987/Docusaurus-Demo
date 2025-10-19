@@ -18,8 +18,16 @@ const config: Config = {
     organizationName: 'carry0987', // Usually your GitHub org/user name.
     projectName: 'Docusaurus-Demo', // Usually your repo name.
 
+    // The broken links detection is only available for a production build
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
+
+    // Global markdown configuration
+    markdown: {
+        hooks: {
+            onBrokenMarkdownLinks: 'warn',
+            onBrokenMarkdownImages: 'throw',
+        }
+    },
 
     // Even if you don't use internationalization, you can use this field to set
     // useful metadata like html lang. For example, if your site is Chinese, you
