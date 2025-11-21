@@ -51,13 +51,13 @@ const config: Config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/carry0987/Docusaurus-Test/tree/master/',
+                    editUrl: 'https://github.com/carry0987/Docusaurus-Demo/tree/master/',
                 },
                 blog: {
                     showReadingTime: true,
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl: 'https://github.com/carry0987/Docusaurus-Test/tree/master/',
+                    editUrl: 'https://github.com/carry0987/Docusaurus-Demo/tree/master/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
