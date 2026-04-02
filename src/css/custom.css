@@ -39,6 +39,6 @@ pre.prism-code:not(:has(> code)) {
     border-radius: 0;
 }
 
-pre > code span[class*='codeLineContent'] {
+pre > code span[class*="codeLineContent"] {
     padding-right: 0;
 }

@@ -174,6 +174,8 @@ const config: Config = {
             searchPagePath: 'search',
             // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
             insights: false,
+            // Optional: whether you want to use the new Ask AI feature (undefined by default)
+            askAi: 'YOUR_ALGOLIA_ASK_AI_ASSISTANT_ID',
         },
     } satisfies Preset.ThemeConfig,
     themes: ['@docusaurus/theme-live-codeblock'],
