@@ -60,7 +60,7 @@ const config: Config = {
                     editUrl: 'https://github.com/carry0987/Docusaurus-Demo/tree/master/',
                 },
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: './src/css/global.custom.css',
                 },
             } satisfies Preset.Options,
         ],
