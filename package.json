@@ -35,7 +35,7 @@
   },
   "pnpm": {
     "overrides": {
-      "webpack": "5.105.0"
+      "webpackbar": "^7.0.0"
     },
     "onlyBuiltDependencies": [
       "core-js",
