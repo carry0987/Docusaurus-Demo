@@ -22,7 +22,7 @@
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.15",
+    "@biomejs/biome": "^2.4.16",
     "@docusaurus/module-type-aliases": "^3.10.1",
     "@docusaurus/theme-classic": "^3.10.1",
     "@docusaurus/theme-live-codeblock": "^3.10.1",
